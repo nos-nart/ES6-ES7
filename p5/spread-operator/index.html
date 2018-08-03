@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        let a = [2, 3, 4];
+        let b = [1, ...a, 5];
+        console.table(b);
+
+        function collect(...arr) {
+            console.table(arr);
+        } 
+
+        collect(10, 20, 30, 40, 50);
+    </script>
+</body>
+</html>

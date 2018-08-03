@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        function* evens() {
+            let count = 0;;
+            while(true) {
+                count += 2;
+                let reset = yield count;
+                if(reset) {
+                    count = 0;
+                }
+            }
+        }
+
+        let sequence = evens();
+        console.log(sequence.next().value);
+        console.log(sequence.next().value);
+        console.log(sequence.next().value);
+        console.log(sequence.next().value);
+        console.log(sequence.next(true).value);
+        console.log(sequence.next().value);
+    </script>
+</body>
+</html>

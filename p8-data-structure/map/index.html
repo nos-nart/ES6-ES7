@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        let a = new Map();
+        let key_1 = "string key";
+        let key_2 = {a : 'obj key'};
+        let key_3 = function(){};
+
+        a.set(key_1, 'return value for a string key');
+        a.set(key_2 , 'return value for a obj key');
+        a.set(key_3, 'return value for a function key');
+
+        console.log(a);
+
+        // instance 2
+        let arr = [[1, 'one'], [2, 'two'], [3, 'three']];
+        let arrMap = new Map(arr);
+        console.log(arrMap);
+
+        for(let [key, value] of arrMap.entries()) {
+            console.log(`${key} points to ${value}`);
+        }
+
+        // instance 3
+        let str = 'dascdjhasdqwozkvsdhwoijfksjfalsdasfhkfewc';
+        let letters = new Map();
+
+        for(let i = 0; i < str.length; i++) {
+            let letter = str[i];
+            if(!letters.has(letter)) {
+                letters.set(letter, 1);
+            } else {
+                letters.set(letter, letters.get(letter) + 1);
+            }
+        }
+
+        console.log(letters);
+
+    </script>
+</body>
+</html>

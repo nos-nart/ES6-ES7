@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        const addToCart = (item, number) => {
+            return Number.isFinite(number);
+        }
+
+        console.log(addToCart('shirt', Infinity)); // false
+        console.log(addToCart('sweater', Math.pow(2, 2))); // true
+
+        const addToCart_2 = (item, number) => {
+            return Number.isInteger(number);
+        }
+    </script>
+</body>
+</html>

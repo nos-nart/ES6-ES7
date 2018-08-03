@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>webpage</title>
+</head>
+<body>
+    <script>
+        // let product = () => {
+        //     return y => {
+        //         return y * x;
+        //     }
+        // }
+
+        let product = x => y => y * x;
+         
+        let double = product(2);
+        console.log(double(5));
+
+        // instance 2
+
+        const addSuffix = (x) => {
+            const concat = (y) => {
+                return y + x;
+            }
+            return concat;
+        }
+        let add_ness = addSuffix("ness");
+        console.log(add_ness("happi"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        function Wizard(name, house, pet) {
+            this.name = name;
+            this.house = house;
+            this.pet = pet;
+            this.greeting = () => `i'm ${this.name} from ${this.house}`;
+        }
+        
+        Wizard.prototype.pet_name;
+        Wizard.prototype.info = function() {
+            return `i have ${this.pet} name ${this.pet_name}`;
+        }
+        harry.pet_name = 'Hedwig';
+        let harry = new Wizard('Harry Potter', 'Gryffindor', 'Owl');
+        console.log(harry);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+
+<body>
+    <script>
+        // const arrayIterator = (array) => {
+        //     let index = 0;
+
+        //     return {
+        //         next: () => {
+        //             if(index < array.length) {
+        //                 let index = array[index];
+        //                 index++;
+        //                 return next;
+        //             }
+        //         }
+        //     }
+        // }
+        // let count = arrayIterator([1, 2, 3]);
+        // console.log(count.next());
+        // console.log(count.next());
+        // console.log(count.next());
+        
+        function* arrayIterator() {
+            // for (const arg of arguments) {
+            //     yield arg;
+            // }
+            
+            //shortcut
+            yield* arguments;
+        }
+
+        let it = arrayIterator([1, 2, 3]);
+        console.log(it)
+    </script>
+</body>
+
+</html>

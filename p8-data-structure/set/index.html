@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+<body>
+    <script>
+        let exam = new Set();
+        exam.add(1);
+        exam.add(2);
+        exam.add(3);
+        console.log(exam);
+
+        // instance 2
+        let arr = [1, 2, 3, 4];
+        let arrSet = new Set(arr);
+        for(let item of arrSet.values()) {
+            console.log(item);
+        }
+
+        // instance 3
+        let str = 'daskfklfackajskldjdqwokcjaklsjrweozczxklcjasjda';
+        let split_str = str.split('');
+        let strSet = new Set(split_str);
+        console.log(strSet);
+    </script>
+</body>
+</html>

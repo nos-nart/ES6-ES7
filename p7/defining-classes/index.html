@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kapi</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(NAME, HEIGHT) {
+                this.name = NAME;
+                this.height = HEIGHT;
+            }
+
+            hello() {
+                console.log(`hello ${this.name}`);
+            }
+        }    
+
+        let me = new Animal("kapi", 170);
+        console.log(me);
+        me.hello();
+
+        //inheritance
+        class kapi extends Animal {
+            constructor(NAME, HEIGHT, COLOR) {
+                super(NAME, HEIGHT);
+                this.color = COLOR;
+            }
+            
+            hello() {
+                console.log(`Hello i'm ${this.name}`);
+            }
+        }
+
+        let pika = new kapi("pika", 55, "yellow");
+        console.log(pika);
+
+    </script>
+</body>
+
+</html>
