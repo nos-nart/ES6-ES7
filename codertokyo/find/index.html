@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js</title>
+</head>
+<body>
+    <script>
+        // The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.
+        let numbers = [1, 2, 3, 4, 12, 60];
+        let biggerThanTen = numbers.find(item => item > 10)
+        console.log(biggerThanTen);
+        // instance 2
+        let inventory = [
+            {
+                name : 'banana',
+                quantity : 2
+            },
+            {
+                name : 'apple',
+                quantity : 5
+            },
+            {
+                name : 'pineapple',
+                quantity : 2
+            }
+        ]
+        let isBanana = (fruit) => fruit.name === 'banana';
+        let findBanana = inventory.find(isBanana);
+        console.log(findBanana);
+    </script>
+</body>
+</html>

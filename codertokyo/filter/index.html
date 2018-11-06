@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS coder-tokyo</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [1, 2, 3, 4];
+        let odd = numbers.filter(item => item % 2 !== 0)
+        console.log(odd);
+        // instance 2
+        let data = [{
+                country: 'China',
+                population: 1409517397,
+            },
+            {
+                country: 'India',
+                population: 1339180127,
+            },
+            {
+                country: 'USA',
+                population: 324459463,
+            },
+            {
+                country: 'Indonesia',
+                population: 263991379,
+            }
+        ]
+
+        let result = data.filter(inhabitant => inhabitant.population >  500000000)
+        console.log(result);
+    </script>
+</body>
+
+</html>

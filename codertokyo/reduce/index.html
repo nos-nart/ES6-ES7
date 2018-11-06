@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js</title>
+</head>
+
+<body>
+    <script>
+        let numbers = [1, 2, 3, 4]
+        let result = numbers.reduce((a, b) => (a + b), 5)
+        console.log(result)
+        // instance 2
+        var flattened = [
+            [0, 1],
+            [2, 3],
+            [4, 5]
+        ].reduce(
+            function (accumulator, currentValue) {
+                return accumulator.concat(currentValue);
+            },
+            []
+        );
+        // flattened is [0, 1, 2, 3, 4, 5]
+        // instance 3
+        let inventory = [
+            {
+                name : 'banana',
+                quantity : 2,
+                price : 100
+            },
+            {
+                name : 'apple',
+                quantity : 5,
+                price : 160
+            },
+            {
+                name : 'pineapple',
+                quantity : 2,
+                price : 300
+            }
+        ]
+        let total = inventory.reduce((sum, inv) => sum + (inv.quantity * inv.price), 0)
+        console.log(total);
+
+        // instance 4
+        let arr = [
+            {x : 1}, {x : 2}, {x : 4}
+        ]
+        let totalArr = arr.reduce((accumulator, currentValue) => accumulator + currentValue.x, 0)
+        console.log(totalArr)
+
+        // instance 5
+        let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];    
+        let filterName = names.reduce((allName, name) => {
+            if(name in allName) {
+                allName[name]++
+            }else {
+                allName[name] = 1
+            }
+            return allName
+        }, {})
+        console.table(filterName)
+    </script>
+</body>
+
+</html>
