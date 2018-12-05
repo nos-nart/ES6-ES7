@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>read csv file</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    
+    <style>
+        .output {
+            display: block;
+            margin-top: 4em;
+            font-family: monospace;
+            font-size: .8em;
+        }
+        .mt-50 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class='container'>
+        <div class='row'>
+            <div class="col xl12 l12 m12 s12">
+                <h1 class='teal-text center'>CONVERT CSV FILE</h1>
+            </div>
+            <div class='col xl12 l12 m12 s12'>
+                <div class='center'>
+                    <p>Select local CSV File:</p>
+                    <input id="csv" type="file">
+                </div>
+            </div>
+            <div class='col xl12 l12 m12 s12'>
+                <p class='center mt-50' id="out">
+                    
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        
+        var fileInput = document.getElementById("csv"),
+
+        readFile = function () {
+            var reader = new FileReader();
+            reader.onload = function () {
+                document.getElementById('out').innerHTML = reader.result.split(`" "`);
+                let temp = reader.result.split(`" "`)[0];
+                // console.log(temp);
+                // console.log(typeof temp);
+                let x = temp.split(`"`);
+                let y = new Array();
+                for(let item in x) {
+                    // console.log(item);
+                    console.log(x[item === 100]);
+                    // y.push(x[item % 2 == 0])
+                }
+                // console.log(y);
+            };
+            reader.readAsBinaryString(fileInput.files[0]);
+        };
+
+        fileInput.addEventListener('change', readFile);
+
+       
+    </script>
+   
+</body>
+    
+</html>
